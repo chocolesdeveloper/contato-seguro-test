@@ -25,7 +25,7 @@ Aplicação completa de gerenciamento (CRUD) de **livros** e **autores**, utiliz
 ### Livros
 
 - Criar novo livro (modal com formulário Ant Design)
-- Listar todos os livros (tabela com paginação e busca básica)
+- Listar todos os livros (tabela com paginação)
 - Visualizar detalhes de um livro (modal de visualização)
 - Excluir livro (com modal de confirmação)
 
@@ -35,8 +35,6 @@ Aplicação completa de gerenciamento (CRUD) de **livros** e **autores**, utiliz
 - Listar todos os autores (tabela)
 - Visualizar detalhes de um autor (modal)
 - Excluir autor (com confirmação)
-
-**Observação**: Não há relação obrigatória livro-autor implementada (pode ser expandida futuramente).
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -74,15 +72,10 @@ O projeto segue rigorosamente as exigências do desafio, com algumas adições q
 
 ## 🚀 Como Executar o Projeto
 
-### Pré-requisitos
-
-- Node.js **18+** (recomendado 20.x)
-- Gerenciador de pacotes: **npm** ou **yarn**
-
 ### 1. Clonagem e Instalação
 
 ```bash
-git clone <URL_DO_SEU_REPOSITORIO>
+git clone https://github.com/chocolesdeveloper/contato-seguro-test
 cd contato-seguro-frontend   # ou o nome da pasta que você usa
 
 # Instalar dependências
