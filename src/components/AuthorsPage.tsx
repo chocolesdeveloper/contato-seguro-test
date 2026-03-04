@@ -52,7 +52,7 @@ const AuthorsPage = () => {
         />
       </div>
 
-      <CreateAuthorModal open={createOpen} onClose={() => openCreate()} onSubmit={handleCreate} />
+      <CreateAuthorModal open={createOpen} onClose={closeCreate} onSubmit={handleCreate} />
 
       <ViewAuthorModal
         open={viewOpen}
