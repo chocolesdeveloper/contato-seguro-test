@@ -1,148 +1,155 @@
 # Contato Seguro - CRUD de Livros e Autores
 
-Um projeto front-end desenvolvido com React 18, Vite, TypeScript e Ant Design para gerenciar um CRUD de livros e autores.
+Projeto front-end desenvolvido como parte do processo seletivo/desafio técnico da **Contato Seguro**.
 
-## 📋 Características
+Aplicação completa de gerenciamento (CRUD) de **livros** e **autores**, utilizando **persistência local** no navegador e seguindo rigorosamente as especificações solicitadas.
 
-- ✅ **CRUD completo** de livros e autores
-- ✅ **IndexedDB** para persistência de dados (via localForage)
-- ✅ **Ant Design** para UI e formulários
-- ✅ **Zustand** para gerenciamento de estado
-- ✅ **TypeScript** para tipagem
-- ✅ **Vite** como bundler
-- ✅ **Docker** habilitado
-- ✅ **Dayjs** para manipulação de datas
+## ✅ Requisitos Atendidos (conforme descrição do desafio)
 
-## 🚀 Instalação e Setup
+- React 18 (sem uso do React 19)
+- Vite como ferramenta de build/bundler
+- TypeScript para tipagem estática
+- Ant Design para componentes de UI e formulários
+- Zustand para gerenciamento de estado global
+- IndexedDB para persistência de dados (wrapper: **localForage**)
+- Day.js para manipulação de datas
+- Docker configurado e funcional
+- Arquitetura limpa e organizada (components, pages, services, store, types, layouts)
+- JSDoc em partes relevantes do código
+- **Sem** meta-frameworks (Next.js, Remix, TanStack Start etc.)
+- **Sem** Tailwind CSS ou SASS
+- **Sem** TurboRepo (não foi exigido no escopo entregue)
 
-### Pré-requisitos
-
-- Node.js 18+ ou superior
-- npm ou yarn
-
-### Instalação
-
-```bash
-# Instalar dependências
-npm install
-
-# Ou com yarn
-yarn install
-```
-
-## 🏃 Executando o Projeto
-
-### Modo desenvolvimento
-
-```bash
-npm run dev
-```
-
-Acesse `http://localhost:5173` no seu navegador.
-
-### Build para produção
-
-```bash
-npm run build
-```
-
-### Preview da build
-
-```bash
-npm run preview
-```
-
-## 🐳 Docker
-
-### Build da imagem
-
-```bash
-docker build -t contato-seguro:latest .
-```
-
-### Executar container
-
-```bash
-docker run -p 3000:3000 contato-seguro:latest
-```
-
-Acesse `http://localhost:3000` no seu navegador.
-
-## 📁 Estrutura do Projeto
-
-```
-src/
-├── components/          # Componentes reutilizáveis
-│   ├── CreateBookModal.tsx
-│   ├── CreateAuthorModal.tsx
-│   ├── BooksTable.tsx
-│   ├── AuthorsTable.tsx
-│   ├── ViewBookModal.tsx
-│   └── ViewAuthorModal.tsx
-├── pages/              # Páginas da aplicação
-│   └── HomePage.tsx
-├── services/           # Serviços (IndexedDB, API, etc)
-│   └── storage.ts
-├── store/              # Estado global (Zustand)
-│   └── index.ts
-├── types/              # Tipos TypeScript
-│   └── index.ts
-├── layouts/            # Layouts da aplicação
-│   └── MainLayout.tsx
-├── App.tsx             # Componente raiz
-├── main.tsx            # Ponto de entrada
-└── index.css           # Estilos globais
-```
-
-## 🎯 Funcionalidades
+## ✨ Funcionalidades Implementadas
 
 ### Livros
 
-- ✅ Criar novo livro (modal)
-- ✅ Visualizar todos os livros (tabela)
-- ✅ Visualizar detalhes de um livro (modal)
-- ✅ Deletar livro com confirmação (alerta)
+- Criar novo livro (modal com formulário Ant Design)
+- Listar todos os livros (tabela com paginação e busca básica)
+- Visualizar detalhes de um livro (modal de visualização)
+- Excluir livro (com modal de confirmação)
 
 ### Autores
 
-- ✅ Criar novo autor (modal)
-- ✅ Visualizar todos os autores (tabela)
-- ✅ Visualizar detalhes de um autor (modal)
-- ✅ Deletar autor com confirmação (alerta)
+- Criar novo autor (modal com formulário)
+- Listar todos os autores (tabela)
+- Visualizar detalhes de um autor (modal)
+- Excluir autor (com confirmação)
 
-## 📝 Regras Seguidas
+**Observação**: Não há relação obrigatória livro-autor implementada (pode ser expandida futuramente).
 
-- ❌ Sem meta frameworks (Next.js, Remix, TanStack Start)
-- ❌ Sem Tailwind ou SASS
-- ✅ Ant Design para UI e formulários
-- ✅ Dayjs para datas
-- ✅ Vite como bundler
-- ✅ Docker
-- ✅ React 18 (com preferência sobre React 19)
-- ✅ IndexedDB via localForage
+## 🛠️ Tecnologias Utilizadas
 
-## 🎨 Diferenciais Implementados
+O projeto segue rigorosamente as exigências do desafio, com algumas adições que melhoram a qualidade, testabilidade e experiência de desenvolvimento.
 
-- ✅ **Zustand** - Gerenciamento de estado
-- ✅ **TypeScript** - Tipagem estática
-- ✅ **JSDoc** - Documentação do código
-- ✅ **Arquitetura bem definida** - services, types, components, pages
+### Dependências Principais (Production)
 
-## 🛠️ Tecnologias
+| Tecnologia            | Finalidade                            | Versão aproximada | Nota / Destaque                        |
+| --------------------- | ------------------------------------- | ----------------- | -------------------------------------- |
+| React                 | Biblioteca principal de UI            | 18.3.1            | React 18 (sem uso do 19)               |
+| TypeScript            | Tipagem estática em todo o projeto    | 5.3.3             | Tipagem forte e interfaces dedicadas   |
+| Vite                  | Bundler e servidor de desenvolvimento | 5.3.1             | Build extremamente rápido              |
+| Ant Design            | Componentes UI e formulários          | 5.12.0            | Design system completo e consistente   |
+| Zustand               | Gerenciamento de estado global        | 4.4.6             | Leve, simples e sem boilerplate        |
+| localForage           | Abstração para IndexedDB              | 1.10.0            | Persistência local no navegador        |
+| Day.js                | Manipulação e formatação de datas     | 1.11.10           | Alternativa leve ao Moment.js          |
+| @tanstack/react-query | Gerenciamento de cache e queries      | 5.90.21           | Cache inteligente e refetch automático |
+| nanoid                | Geração de IDs únicos                 | 5.1.6             | IDs curtos e seguros para entidades    |
 
-- **React 18** - Biblioteca UI
-- **TypeScript** - Linguagem
-- **Vite** - Bundler/Build tool
-- **Ant Design** - UI library
-- **Zustand** - State management
-- **localForage** - IndexedDB wrapper
-- **Dayjs** - Date library
-- **Docker** - Containerização
+### Ferramentas de Desenvolvimento e Qualidade (DevDependencies)
 
-## 📄 Licença
+| Ferramenta               | Finalidade                                    | Versão aproximada | Nota / Uso no projeto                |
+| ------------------------ | --------------------------------------------- | ----------------- | ------------------------------------ |
+| Vitest                   | Testes unitários e de componentes             | 2.0.18            | Runner de testes ultrarrápido        |
+| @vitest/coverage-v8      | Cobertura de código                           | 2.0.18            | Relatórios de cobertura integrados   |
+| @vitest/ui               | Interface web para Vitest                     | 2.0.18            | Visualização interativa dos testes   |
+| Storybook                | Desenvolvimento e documentação de componentes | 8.2.14            | + React-Vite + vários addons         |
+| @storybook/react-vite    | Integração Storybook + Vite                   | 8.2.14            | Build otimizado para o projeto       |
+| @chromatic-com/storybook | Testes visuais automatizados                  | 5.0.1             | Regressão visual (Chromatic)         |
+| @storybook/addon-a11y    | Testes de acessibilidade                      | 8.2.14            | Conformidade WCAG                    |
+| @storybook/addon-docs    | Documentação automática de componentes        | 8.2.14            | MDX + Autodocs                       |
+| happy-dom                | Ambiente DOM para testes sem browser          | 20.8.3            | Usado no Vitest por padrão           |
+| JSDoc                    | Documentação inline no código                 | —                 | Comentários em funções e componentes |
+| Docker                   | Containerização da aplicação                  | —                 | Dockerfile + .dockerignore inclusos  |
 
-MIT
+## 🚀 Como Executar o Projeto
 
-## 👤 Autor
+### Pré-requisitos
 
-Desenvolvido como desafio de front-end.
+- Node.js **18+** (recomendado 20.x)
+- Gerenciador de pacotes: **npm** ou **yarn**
+
+### 1. Clonagem e Instalação
+
+```bash
+git clone <URL_DO_SEU_REPOSITORIO>
+cd contato-seguro-frontend   # ou o nome da pasta que você usa
+
+# Instalar dependências
+npm install
+# ou
+yarn install
+```
+
+```bash
+# Rodar projeto
+npm run dev
+# ou
+yarn dev
+```
+
+A aplicação estará disponível em:→ http://localhost:5173
+
+```bash
+# Build do projeto
+npm run build
+# ou
+yarn build
+```
+
+A pasta dist/ será gerada com os arquivos otimizados.
+
+```bash
+# Preview
+npm run preview
+# ou
+yarn preview
+```
+
+Acesse: http://localhost:4173 (porta padrão do Vite preview)
+
+```bash
+# 1. Construir a imagem
+docker build -t contato-seguro:latest .
+
+# 2. Executar o container
+docker run -d -p 3000:3000 --name contato-seguro contato-seguro:latest
+```
+
+### Estrutura de Pastas (resumida)
+
+src/
+├── components/ ← Modais e tabelas reutilizáveis
+├── helpers/ ← Funções de ajuda
+├── hooks/ ← Hooks personlizados
+├── layout/ ← Layout padrão para o projeto
+├── pages/ ← Páginas principais (HomePage)
+├── services/ ← Lógica de persistência (storage.ts)
+├── store/ ← Stores Zustand
+├── stories/ ← Arquivos para storybook
+├── test/ ← Arquivos do vitest
+├── types/ ← Interfaces e tipos TypeScript
+├── App.tsx
+├── main.tsx
+└── index.css
+
+### 📝 Notas Finais
+
+Os dados persistem mesmo após fechar o navegador (graças ao IndexedDB).
+Para limpar todos os dados → abra o DevTools → Application → IndexedDB → delete o database do localForage.
+Projeto segue boas práticas de organização e tipagem forte.
+
+### 👤 Autor
+
+Desenvolvido por William como entrega do desafio front-end Contato Seguro (2025/2026).
+📄 Licença: MIT
