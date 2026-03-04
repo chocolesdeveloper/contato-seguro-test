@@ -121,20 +121,23 @@ docker run -d -p 3000:3000 --name contato-seguro contato-seguro:latest
 
 ### Estrutura de Pastas (resumida)
 
+
+```text
 src/
-├── components/         # Modais e tabelas reutilizáveis
-├── helpers/            # Funções de ajuda
-├── hooks/              # Hooks personalizados
-├── layout/             # Layout padrão para o projeto
-├── pages/              # Páginas principais (HomePage)
-├── services/           # Lógica de persistência (storage.ts)
-├── store/              # Stores Zustand
-├── stories/            # Arquivos para storybook
-├── test/               # Arquivos do vitest
-├── types/              # Interfaces e tipos TypeScript
+├── components/          # Modais e tabelas reutilizáveis
+├── helpers/             # Funções de ajuda
+├── hooks/               # Hooks personalizados
+├── layout/              # Layout padrão para o projeto
+├── pages/               # Páginas principais (HomePage)
+├── services/            # Lógica de persistência (storage.ts)
+├── store/               # Stores Zustand
+├── stories/             # Arquivos para storybook
+├── test/                # Arquivos do vitest
+├── types/               # Interfaces e tipos TypeScript
 ├── App.tsx
 ├── main.tsx
 └── index.css
+```
 
 ### 📝 Notas Finais
 
