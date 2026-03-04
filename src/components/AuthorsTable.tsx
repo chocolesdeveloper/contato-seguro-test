@@ -21,20 +21,21 @@ const AuthorsTable: React.FC<AuthorsTableProps> = ({
       title: "Nome",
       dataIndex: "name",
       key: "name",
-      width: 200,
+      width: 180,
     },
     {
       title: "Email",
       dataIndex: "email",
       key: "email",
       render: (email?: string) => email || "-",
+      width: 220,
     },
     {
       title: "Ações",
       key: "actions",
-      width: 150,
+      width: 160,
       render: (_: any, record: Author) => (
-        <Space>
+        <Space size="middle">
           <Button type="primary" size="small" icon={<EyeOutlined />} onClick={() => onView(record)}>
             Ver
           </Button>
@@ -55,13 +56,20 @@ const AuthorsTable: React.FC<AuthorsTableProps> = ({
   ];
 
   return (
-    <Table
-      columns={columns}
-      dataSource={authors}
-      loading={loading}
-      rowKey="id"
-      pagination={{ pageSize: 10 }}
-    />
+    <div
+      style={{
+        width: "100%",
+      }}
+    >
+      <Table
+        columns={columns}
+        dataSource={authors}
+        loading={loading}
+        rowKey="id"
+        pagination={{ pageSize: 10 }}
+        scroll={{ x: 560 }}
+      />
+    </div>
   );
 };
 

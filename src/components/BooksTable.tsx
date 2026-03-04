@@ -69,6 +69,7 @@ const BooksTable: React.FC<BooksTableProps> = ({ books, loading = false, onDelet
       loading={loading}
       rowKey="id"
       pagination={{ pageSize: 10 }}
+      scroll={{ x: 560 }}
     />
   );
 };
